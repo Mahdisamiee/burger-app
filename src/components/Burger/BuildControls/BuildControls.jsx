@@ -23,7 +23,7 @@ function BuildControls(props) {
           />
         )
       )}
-      <button className={classes.OrderButton} disabled={!props.purchasable}>CHECK OUT</button>
+      <button onClick={props.showModal} className={classes.OrderButton} disabled={!props.purchasable}>CHECK OUT</button>
     </div>
   )
 }

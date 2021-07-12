@@ -12,12 +12,12 @@ function Burger({ingredients}) {
     }
     return arr;
   }) : null
-
   return (
     <div className={classes.Burger}>
       <BurgerIngredient type="bread-top" />
       { 
-        transformedIngredients.reduce((sum, el)=> sum += el.length, 0) ? transformedIngredients : <p>start select ingredients!</p>
+        transformedIngredients
+        .reduce((sum, el)=> sum += el.length, 0) ? transformedIngredients : <p>start select ingredients!</p>
       }
       <BurgerIngredient type="bread-bottom" />
     </div>
